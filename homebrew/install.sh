@@ -22,3 +22,5 @@ then
 fi
 
 exit 0
+
+brew install colordiff
