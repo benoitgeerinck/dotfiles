@@ -93,6 +93,11 @@ prompt_context() {
   fi
 }
 
+# Time
+prompt_time() {
+  prompt_segment white black  "[%D{%H:%M:%S}]"
+}
+
 # Git: branch/detached head, dirty status
 prompt_git() {
   (( $+commands[git] )) || return
@@ -242,6 +247,7 @@ build_prompt() {
   prompt_status
   prompt_virtualenv
   prompt_aws
+  prompt_time
   prompt_context
   prompt_dir
   prompt_git
